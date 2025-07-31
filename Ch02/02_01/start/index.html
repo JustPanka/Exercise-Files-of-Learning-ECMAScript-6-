@@ -7,7 +7,11 @@
         display: flex;
         justify-content: space-around;
       }
-      
+      #box > div {
+        height: 5em;
+        width: 5em;
+        background-color: purple;
+      }
     </style>
   </head>
   <body>
@@ -15,13 +19,13 @@
     <div id="box"></div>
     <script type="text/javascript">
       var div;
-      var box = document.getElementById('box');
+      var box = document.getElementById("box");
 
-      for(var i = 0; i < 5; i++) {
-        div = document.createElement('div');
-        div.onclick = function() {
-          alert('This is box #', + i);
-        }
+      for (let i = 0; i < 5; i++) {
+        div = document.createElement("div");
+        div.onclick = function () {
+          alert("This is box # " + i);
+        };
         box.appendChild(div);
       }
     </script>
